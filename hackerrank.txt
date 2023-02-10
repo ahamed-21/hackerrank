@@ -1,0 +1,67 @@
+#include <iostream>
+#include<string>
+#include<time.h>
+using namespace std;
+int main() {
+    srand(time(0));
+    const char* rock_paper_scissor_game[3]={"rock","paper","scissor"};
+   
+    string user_choice;
+    int i=1;
+    while(i==1){
+    int ran = rand() % 3;
+    cout<<"enter the choice : ";
+        cin>>user_choice;
+        cout<<rock_paper_scissor_game[ran];
+        if(user_choice=="rock" && rock_paper_scissor_game[ran]=="paper")
+        {
+            cout<<"\nComputer is the winner";
+        }
+        if(user_choice=="rock" && rock_paper_scissor_game[ran]=="scissor")
+        {
+            cout<<"\nplayer is the winner";
+        }
+        if(user_choice=="paper" && rock_paper_scissor_game[ran]=="rock")
+        {
+            cout<<"\nuser is the winnner";
+        }
+        if(user_choice=="paper" && rock_paper_scissor_game[ran]=="scissor")
+        {
+            cout<<"\ncomputer is the winner";
+        }
+        if(user_choice=="scissor" && rock_paper_scissor_game[ran]=="rock")
+        {
+            cout<<"\ncomputer is the winner";
+        }
+        if(user_choice=="scissor" && rock_paper_scissor_game[ran]=="paper")
+        {
+            cout<<"\nuser is the winner";
+        }
+        if(user_choice=="rock" && rock_paper_scissor_game[ran]=="rock")
+        {
+            cout<<"\nDraw";
+        }
+        if(user_choice=="scissor" && rock_paper_scissor_game[ran]=="scissor")
+        {
+            cout<<"\nDraw";
+        }
+        if(user_choice=="paper" && rock_paper_scissor_game[ran]=="paper")
+        {
+            cout<<"\nDraw";
+        }
+        cout<<"\nDo you want to continue press 1";
+        cin>>i;
+        if(i!=1){
+            exit(0);
+        }
+        
+    }
+    
+        
+        // else if(i!=1){
+        //     break;
+        //}
+
+    return 0;
+    
+}
